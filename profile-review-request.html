@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.122.0">
-    <title>Essay Review</title>
+    <title>Profile Review</title>
     <link rel="icon" href="images/admit-studio-logo.png" type="image/png">
 
 
@@ -123,49 +123,139 @@
   <main>
     <div class="py-5 text-center">
       <img class="d-block mx-auto mb-4" src="images/admit-studio-logo.png" width="72" height="72">
-      <h2>Essay Review</h2>
-      <p class="lead">Please provide the details of the essay you would like to review</p>
+      <h2>Profile Review</h2>
+      <p class="lead">Please provide the details of your profile</p>
     </div>
 
     <div class="row g-5">
+      <form class="needs-validation" action="profile-feedback.html" method="get" novalidate>
+        <div class="row g-3">
+          <div class="col-12">
+            <label for="school" class="form-label">School <span style="color: red;">*</span></label>
+            <select class="form-select" id="school" name="school" required>
+              <option value="">Choose...</option>
+              <option>Cambridge Judge Business School</option>
+              <option>Oxford Saïd Business School</option>
+              <option>London Business School</option>
+            </select>
+            <div class="invalid-feedback">
+              Please select a valid school
+            </div>
+          </div>
 
-        <form class="needs-validation" action="essay-feedback.html" method="get" novalidate>
-          <div class="row g-3">
-            <div class="col-12">
-              <label for="school" class="form-label">School <span style="color: red;">*</span></label>
-              <select class="form-select" id="school" name="school" required>
-                <option value="">Choose...</option>
-                <option>Cambridge Judge Business School</option>
-                <option>Oxford Saïd Business School</option>
-                <option>London Business School</option>
-              </select>
-              <div class="invalid-feedback">
-                Please select a valid school
+          <div class="col-12">
+            <label class="form-label" for="resume-file">Resume <span style="color: red;">*</span></label>
+            <input type="file" class="form-control" id="resume-file" required>
+            <div class="invalid-feedback">
+              Please upload your resume
+            </div>
+          </div>
+     
+          <div class="col-12">
+            <label class="form-label">
+              Test Scores <span style="color: red;">*</span>
+            </label>
+            <div class="form-check">
+              <input
+                type="radio"
+                name="exam-radios"
+                class="form-check-input"
+                required
+                onchange="toggleNumberInput()"
+                value="GMAT_focus"
+              />
+              <label class="form-check-label">GMAT Focus Edition</label>
+            </div>
+            <div class="form-check">
+              <input
+                type="radio"
+                name="exam-radios"
+                class="form-check-input"
+                required
+                onchange="toggleNumberInput()"
+                value="GMAT_classic"
+              />
+              <label class="form-check-label">GMAT Classic Edition (10th edition)</label>
+            </div>
+            <div class="form-check">
+              <input
+                type="radio"
+                name="exam-radios"
+                class="form-check-input"
+                required
+                onchange="toggleNumberInput()"
+                value="GRE"
+              />
+              <label class="form-check-label">GRE</label>
+            </div>
+            <div class="form-check">
+              <input
+                type="radio"
+                name="exam-radios"
+                class="form-check-input"
+                required
+                onchange="toggleNumberInput()"
+                value="no_score"
+              />
+              <label class="form-check-label">I don't have a test score yet</label>
+            </div>
+            <div class="invalid-feedback" id="radioError">
+              Please choose an option above
+            </div>
+            <div class="conditional" id="numberInputDiv">
+              <label for="numberInput">Enter your score: <span style="color: red;">*</span></label>
+              <input
+                type="number"
+                id="numberInput"
+                name="number"
+                class="form-control"
+              />
+              <div class="invalid-feedback" id="numberError">
+                Please enter your score
               </div>
             </div>
+          </div>
 
-            <div class="col-12">
-              <label for="essay-prompt" class="form-label">Essay Prompt <span style="color: red;">*</span></label>
-              <textarea class="form-control" aria-label="With textarea" id="essay-prompt" name="essay-prompt" required></textarea>
-              <div class="invalid-feedback">
-                Please enter the essay prompt
-              </div>
+          <div class="col-12">
+            <label class="form-label">
+              Gender <span style="color: red;">*</span>
+            </label>
+            <div class="form-check">
+              <input type="radio" name="gender-radios" class="form-check-input" required/>
+              <label class="form-check-label">Male</label>
             </div>
-
-            <div class="col-12">
-              <label for="essay-draft" class="form-label">Essay Draft <span style="color: red;">*</span></label>
-              <textarea class="form-control" aria-label="With textarea" id="essay-draft" name="essay-draft" required></textarea>
-              <div class="invalid-feedback">
-                Please enter your essay draft
-              </div>
+            <div class="form-check">
+              <input type="radio" name="gender-radios" class="form-check-input" required/>
+              <label class="form-check-label">Female</label>
             </div>
-
-            <div class="col-12">
-              <label><span style="color: red;">*</span> indicates required field</label>
+            <div class="mb-3 form-check">
+              <input type="radio" name="gender-radios" class="form-check-input" required/>
+              <label class="form-check-label">Other</label>
             </div>
+            <div class="invalid-feedback gender-error">
+              Please choose a gender
+            </div>
+          </div>
 
-          <button class="w-100 btn btn-primary btn-lg" type="submit">Review Essay</button>
-        </form>
+          <div class="col-12">
+            <label for="nationality" class="form-label">Nationality <span style="color: red;">*</span></label>
+            <select class="form-select" id="nationality" name="nationality" required>
+              <option value="">Choose...</option>
+              <option>United Kingdom</option>
+              <option>United States</option>
+              <option>Other</option>
+            </select>
+            <div class="invalid-feedback">
+              Please select your nationality
+            </div>
+          </div>
+
+          <div class="col-12">
+            <label><span style="color: red;">*</span> indicates required field</label>
+          </div>
+
+        <button class="w-100 btn btn-primary btn-lg" type="submit">Review Profile</button>
+      </form>
     </div>
   </main>
 
@@ -180,5 +270,5 @@
 </div>
 <script src="bootstrap_assets/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script src="scripts/essay-review-request.js"></script></body>
+    <script src="scripts/profile-review-request.js"></script></body>
 </html>
