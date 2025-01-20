@@ -94,7 +94,7 @@
 
     
     <!-- Custom styles for this template -->
-    <link href="styles/applications.css" rel="stylesheet">
+    <link href="styles/settings.css" rel="stylesheet">
   </head>
   <body>
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
@@ -116,20 +116,20 @@
     <header data-bs-theme="dark">
       <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Welcome, Akira</a>
+          <a class="navbar-brand" href="applications.html">Welcome, Akira</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav me-auto mb-2 mb-md-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Your Applications</a>
+                <a class="nav-link" aria-current="page" href="applications.html">Your Applications</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="profile.html">View Profile</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="settings.html">Settings</a>
+                <a class="nav-link active" href="#">Settings</a>
               </li>
             </ul>
             <div class="d-flex">
@@ -144,41 +144,12 @@
       <div class="container marketing">
 
       <div class="extra-space"></div>
-      <div class="container mt-5">
-        <div class="d-flex justify-content-between align-items-center mb-4">
-          <span class="h5 mb-0">You have started 3 applications</span>
-          <a href="#" class="btn btn-primary">Start a new application</a>
-        </div>
-        <!-- Card 1 -->
-        <div class="card mb-4 flex-row">
-          <img src="images/cambridge-logo.png" class="card-img-left">
-          <div class="card-body">
-            <h5 class="card-title">Cambridge Judge Business School</h5>
-            <p class="card-text">Cambridge, United Kingdom</p>
-            <a href="#" class="btn btn-outline-primary">View your application</a>
-          </div>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="card mb-4 flex-row">
-          <img src="images/oxford-logo.png" class="card-img-left">
-          <div class="card-body">
-            <h5 class="card-title">Oxford Saïd Business School</h5>
-            <p class="card-text">Oxford, United Kingdom</p>
-            <a href="#" class="btn btn-outline-primary">View your application</a>
-          </div>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="card mb-4 flex-row">
-          <img src="images/lbs-logo.jpg" class="card-img-left">
-          <div class="card-body">
-            <h5 class="card-title">London Business School</h5>
-            <p class="card-text">London, United Kingdom</p>
-            <a href="#" class="btn btn-outline-primary">View your application</a>
-          </div>
-        </div>
-      </div><!-- /.container -->
+      <div class="d-grid gap-2 col-6 mx-auto">
+        <button class="btn btn-outline-primary btn-lg" type="button">Change Password</button>
+        <button class="btn btn-outline-primary btn-lg" type="button">Change Plan</button>
+        <button class="btn btn-outline-danger btn-lg" type="button">Delete Account</button>
+      </div>
+      <div class="extra-space"></div>
 
       <!-- FOOTER -->
       <footer class="container">
