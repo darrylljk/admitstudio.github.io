@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cambridge - Essay #1</title>
+  <link rel="icon" href="../../images/admit-studio-logo.png" type="image/png">
+  
+  <!-- Bootstrap core CSS -->
+  <link href="../../bootstrap_assets/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Custom styles for this template -->
+  <link href="../../styles/essay.css" rel="stylesheet">
+</head>
+<body>
+  
+  <header data-bs-theme="dark">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../../applications.html">Welcome, Akira</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="../../applications.html">Your Applications</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="../../profile.html">View Profile</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../../settings.html">Settings</a>
+            </li>
+          </ul>
+          <div class="d-flex">
+            <a class="btn btn-outline-light me-2" href="../../index.html">Log out</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  
+  <div class="container-fluid">
+    <div class="row">
+      
+      <div class="d-md-none mt-3 pt-5">
+        <div class="dropdown">
+          <button class="btn btn-primary dropdown-toggle w-100" type="button" id="sidebarDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+            Application Material List
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="sidebarDropdown">
+            <li><a class="dropdown-item" href="home.html">School home page</a></li>
+            <li><a class="dropdown-item" href="resume.html">Resume</a></li>
+            <li><a class="dropdown-item active" href="#">Essay #1</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      
+      <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+        <div class="position-sticky pt-3">
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a href="home.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none ps-3 pe-3">
+                <span class="fs-5 text-center">Oxford Saïd Business School</span>
+              </a>
+              <hr class="w-75 my-2 mx-auto">
+              <a class="nav-link" aria-current="page" href="resume.html">
+                Resume
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">
+                Essay #1
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      
+      <main class="col-md-9 ps-4 ms-sm-auto col-lg-10 px-md-4 mt-3 pt-md-5">
+        <div class="row g-5">
+          <form class="needs-validation" action="" method="get" novalidate>
+            <div class="row g-3">
+              <div class="extra-space"></div>
+              <h3>Essay #1</h3>
+              <div>
+                Personal Statement: please provide a personal statement that outlines anything additional that you would like the Admissions Committee to consider. (Word limit: 250 words)
+              </div>
+              <div class="extra-space"></div>
+              <div class="extra-space"></div>
+              <div class="col-12">
+                <label for="essay-draft" class="form-label">Essay Draft</label>
+                <textarea class="form-control" aria-label="With textarea" id="essay-draft" name="essay-draft" rows="12" required></textarea>
+                <div class="invalid-feedback">
+                  Please enter your essay draft
+                </div>
+              </div>
+              <button class="w-auto btn btn-primary btn-lg" type="submit">Review Essay</button>
+            </form>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+  
+  <script src="../../bootstrap_assets/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../scripts/essay-review-request.js"></script>
+</body>
+</html>
